@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         実験用広告表示（GitHubファイル表示版）
 // @namespace    http://your-domain.com/
-// @version      0.3
-// @description  1分後にGitHub上の画像・PDFを画面下部に表示
+// @version      0.4
+// @description  1分後にGitHub上の画像を画面下部に表示
 // @author       h-maruta
 // @match        https://www.jalan.net/*
 // @grant        none
@@ -14,7 +14,7 @@
     setTimeout(function() {
         // コンテナを作成
         const adContainer = document.createElement('div');
-        ad.style.cssText = `
+        adContainer.style.cssText = `
             position:fixed;
             bottom:0;
             width:100%;
@@ -25,13 +25,18 @@
             justify-content:center;
             align-items:center;
         `;
-        // PNG画像を表示
+
+        // PNG画像を作成
         const img = document.createElement('img');
-        img.src = 'https://raw.githubusercontent.com/h-maruta-ai/tampermonkey-scripts-sample/main/banner.png'; // ←ここを変更
+        img.src = 'https://raw.githubusercontent.com/h-maruta-ai/tampermonkey-scripts-sample/main/banner.png';
         img.style.height = '90px';
         img.style.width = '728px';
-        ad.appendChild(img);
+        img.style.objectFit = 'contain';
 
-        document.body.appendChild(ad);
-    }, 60000); // 60秒後
+        // コンテナに画像を追加
+        adContainer.appendChild(img);
+
+        // ページに追加
+        document.body.appendChild(adContainer);
+    }, 60000); // 60秒後（60,000ミリ秒）
 })();

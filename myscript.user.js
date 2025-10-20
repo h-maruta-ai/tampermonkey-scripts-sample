@@ -4,7 +4,7 @@
 // @version      0.5
 // @description  1分後にGitHub上の画像を画面下部に表示
 // @author       h-maruta
-// @match        https://www.jalan.net/*
+// @match        https://www.asahi.com/*
 // @grant        none
 // ==/UserScript==
 

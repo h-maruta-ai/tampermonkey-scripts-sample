@@ -28,7 +28,7 @@
 
         // PNG画像を作成
         const img = document.createElement('img');
-        img.src = 'https://raw.githubusercontent.com/h-maruta-ai/tampermonkey-scripts-sample/main/banner.png';
+        img.src = 'https://raw.githubusercontent.com/h-maruta-ai/tampermonkey-scripts-sample/main/samplefile.png';
         img.style.height = '90px';
         img.style.width = '728px';
         img.style.objectFit = 'contain';

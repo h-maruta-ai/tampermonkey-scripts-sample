@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         実験用広告表示（サイト内遷移対応版）
+// @name         国内旅行A
 // @namespace    http://your-domain.com/
 // @version      0.6
-// @description  初回1分後にGitHub上の画像を表示し、サイト内遷移後も表示を維持
+// @description  実験用（サイト内遷移対応版）
 // @author       h-maruta
 // @match        https://www.asahi.com/*
 // @grant        none

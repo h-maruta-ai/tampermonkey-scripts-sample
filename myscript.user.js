@@ -39,7 +39,7 @@
 
         // 画像要素を作成
         const img = document.createElement('img');
-        img.src = 'https://raw.githubusercontent.com/h-maruta-ai/tampermonkey-scripts-sample/e2ae628d9e9151e7b2e3309fee20a1f27f163e72/sampplefile.png';
+        img.src = 'https://raw.githubusercontent.com/h-maruta-ai/tampermonkey-scripts-sample/1cc0a13e3b044be34b2254ef9843a2a7174ee125/domesticaccess.png';
         img.alt = '広告バナー';
         img.style.cssText = `
             max-width: 700px;
@@ -57,7 +57,7 @@
         adContainer.appendChild(img);
         document.body.appendChild(adContainer);
 
-        console.log('✅ Tampermonkeyバナーを表示しました');
+        console.log('Tampermonkeyバナーを表示しました');
     }
 
     // 初期化処理
@@ -93,7 +93,7 @@
     const observer = new MutationObserver(() => {
         if (location.href !== currentUrl) {
             currentUrl = location.href;
-            console.log('🔄 ページ遷移を検知:', currentUrl);
+            console.log('ページ遷移を検知:', currentUrl);
             
             // 既存の広告を削除
             const existingAd = document.getElementById('tampermonkey-ad-banner');
